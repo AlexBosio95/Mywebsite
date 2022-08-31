@@ -1,12 +1,12 @@
 <template>
-<div class="project">
+<div class="project" id="project">
     <div class="row row-cols-1 row-cols-md-2">
         <div class="col">
             <div class="git-card" v-scrollanimation>
                 <div class="text-center">
                     <img src="@/assets/img/github.png" alt="github">
                     <h3>{{getNameProfile(myGit.login)}}</h3>
-                    <a :href="myGit.html_url">View Profile</a>
+                    <a :href="myGit.html_url" target="_blank">View Profile</a>
                 </div>
             </div>
         </div>

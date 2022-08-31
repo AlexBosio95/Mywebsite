@@ -1,10 +1,10 @@
 <template>
-    <div class="contacts position-reltive">
+    <div class="contacts position-reltive" id="contact">
         <div class="d-flex justify-content-center py-3" v-scrollanimation>
             <div class="position-absolute">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-github"></i>
+                <a href="https://www.instagram.com/alexbosio95/?hl=it" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/alex-bosio-91034aa5" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/AlexBosio95" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </div>
