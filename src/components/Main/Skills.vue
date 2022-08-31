@@ -9,12 +9,6 @@
             :type = 'card.type'
             :certification = 'card.certification'
             />
-            <div class="col">
-                <div class="more p-5">
-                    <h4>More</h4>
-                    <h1><i class="fa-solid fa-arrow-right"></i></h1>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -107,13 +101,13 @@ export default {
                     certification: 'Boolean s.r.l.'
                 },
 
-                {
-                    id: 10,
-                    title: 'Python',
-                    type: 'Language',
-                    imgUrl: 'python.png',
-                    certification: 'Udemy'
-                }
+                // {
+                //     id: 10,
+                //     title: 'Python',
+                //     type: 'Language',
+                //     imgUrl: 'python.png',
+                //     certification: 'Udemy'
+                // }
             ]
         }
     }

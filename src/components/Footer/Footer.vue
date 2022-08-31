@@ -1,16 +1,19 @@
 <template>
     <footer>
         <Contacts />
+        <Realized />
     </footer>
 </template>
 
 <script>
 import Contacts from './Contacts.vue';
+import Realized from './Realized.vue';
 
 export default {
 
     components:{
         Contacts,
+        Realized,
     }
 }
 </script>

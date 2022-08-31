@@ -128,11 +128,11 @@ export default {
     }
 
     .open{
-        padding-top: 1rem;
-        background-color: rgb(29, 29, 29);
-        border-radius: 0 0 1.5rem 1.5rem;
+        padding-top: 2rem;
+        background-color: rgba(29, 29, 29, 0.5);
+        border-radius: 0 0 1rem 1rem;
         animation-name: down;
-        animation-duration: 1s;
+        animation-duration: 0.4s;
     }
 
 
