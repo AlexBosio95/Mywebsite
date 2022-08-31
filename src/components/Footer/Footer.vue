@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <Contacts />
+        <Contacts id="contact"/>
         <Realized />
     </footer>
 </template>

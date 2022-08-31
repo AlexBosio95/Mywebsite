@@ -1,8 +1,8 @@
 <template>
 <main>
     <TitleSection />
-    <Skills />
-    <Project 
+    <Skills id="skill"/>
+    <Project id="project"
     :myGit = 'myGit'
     :myGitRepo = 'myGitRepo' />
     

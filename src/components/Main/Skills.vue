@@ -1,6 +1,6 @@
 <template>
 <div class="skills">
-    <div class="container py-5" id="skill">
+    <div class="container py-5">
         <h1 class="text-center">Skills</h1>
         <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-3 mt-3">
             <Card v-scrollanimation v-for="card in dataCard" :key="dataCard.id" 
@@ -119,6 +119,7 @@ export default {
 
 .skills{
     background-color: #252734;
+    padding-top: 2rem;
 
     .more{
         text-align: center;

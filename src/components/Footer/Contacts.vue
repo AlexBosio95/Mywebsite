@@ -1,5 +1,5 @@
 <template>
-    <div class="contacts position-reltive" id="contact">
+    <div class="contacts position-reltive">
         <div class="d-flex justify-content-center py-3" v-scrollanimation>
             <div class="position-absolute">
                 <a href="https://www.instagram.com/alexbosio95/?hl=it" target="_blank"><i class="fa-brands fa-instagram"></i></a>

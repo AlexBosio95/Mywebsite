@@ -1,5 +1,5 @@
 <template>
-<div class="project" id="project">
+<div class="project">
     <div class="row row-cols-1 row-cols-md-2">
         <div class="col">
             <div class="git-card" v-scrollanimation>
@@ -92,7 +92,7 @@ export default {
 
 .project{
     background-color: #323546;
-    padding: 2rem 0;
+    padding: 5rem 0;
 
     .git-card{
         background-color: #252734;

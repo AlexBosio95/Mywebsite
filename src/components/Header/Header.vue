@@ -23,7 +23,7 @@
                     </div>
             </div>
 
-            <div class="col-12 w-100 text-center arrow-up mt-2" v-show="isVisible">
+            <div class="col-12 w-100 text-center arrow-up my-2" v-show="isVisible">
                 <i @click="isVisible = !isVisible" class="fa-solid fa-chevron-up"></i>
             </div>
         </div>
@@ -128,17 +128,14 @@ export default {
     }
 
     .open{
-        padding-top: 2rem;
-        background-color: rgba(29, 29, 29, 0.5);
-        border-radius: 0 0 1rem 1rem;
+        padding-top: 1rem;
+        background-color: rgba(#252734, 1);
         animation-name: down;
         animation-duration: 0.4s;
     }
 
-
-
     @keyframes down {
-        0%   {top: -8rem;}
+        0%   {top: -5rem;}
         100% {top: 0;}
 }
 
