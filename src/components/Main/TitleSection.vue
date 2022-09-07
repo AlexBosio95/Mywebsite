@@ -1,66 +1,120 @@
 <template>
-<div class="title-section" id="home">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 pt-3">
-            <div class="col d-flex align-items-center flex-wrap">
-                <div>
-                    <h3 v-scrollanimation class="animation-opacity">Hi, I'm Alex.</h3>
-                    <h1 v-scrollanimation class="animation-opacity">I'm Full Stack Web Developer</h1>
-                    <div v-scrollanimation class="bar animation-opacity-md"></div>
-                    <p v-scrollanimation class="animation-opacity-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni est sequi nesciunt omnis, vitae saepe optio fugiat ab, debitis velit qui quos corrupti! Harum ipsam excepturi et, sed dolores eius!</p>
+    <div class="title-section">
+        <Menu 
+            :dataMenu = 'dataMenu'/>
+        <div class="container">
+            <div class="text-center d-flex justify-content-center">
+                
+                <div class="box-text">
+                    <h6  v-scrollanimation>Hello, I'm</h6>
+                    <h1 class="fw-bold" v-scrollanimation>Alex Bosio</h1>
+                    <p  v-scrollanimation>Full Stack Web Developer</p>
+                    <div class="d-flex justify-content-center">
+                        <SquareButton v-for="(button, index) in ButtonData" :key="index"
+                        :text= 'button.text'
+                        :type= 'button.type'
+                        :url= 'button.url'
+                        />
+                    </div>
+                </div>
+
+                <div v-scrollanimation class="image-profile ">
+                    <div class="bg-image">
+                        <img src="@/assets/img/mypc.png" alt="">
+                    </div>
                 </div>
             </div>
-            <div v-scrollanimation class="col d-flex justify-content-center align-items-end">
-                <img class="animation-opacity-md" src="@/assets/img/mypc.png" alt="">
+
+            <div class="name">
+                <h5>Alex</h5>
             </div>
+
+            <Social class="social"/>
+
         </div>
     </div>
-</div>
 </template>
 
 <script>
+import SquareButton from '../Common/SquareButton.vue';
+
+import Menu from './Menu.vue';
+import Social from './Social.vue';
+
 export default {
 
+    components: { 
+        Menu,
+        SquareButton,
+        Social 
+    },
+
+    props:{
+        dataMenu : Array,
+    },
+    data: function(){
+        return{
+            ButtonData: [ 
+                {
+                text: 'Download CV',
+                type: 'standard',
+                url: 'https://www.canva.com/design/DAFHzCv3a1Q/0HVBTenwv1gujFO_snMY3g/view?utm_content=DAFHzCv3a1Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink',
+                },
+                {
+                text: 'About me',
+                type: 'fill',
+                url: '#contact',
+                }
+            ] 
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
 
-.title-section{
-    background-color: #323546;
-    
-    height: 100vh;
-    padding-top: 10vh;
+@import '@/style/variables.scss';
 
-        h1{
-            font-size: 6rem;
-            font-weight:bold;
+.title-section{
+    background-color: $Graylight;
+    height: 100vh;
+    position: relative;
+
+    .box-text{
+        text-align: center;
+        padding-top: 5rem;
+        width: 100%;
+
+        p{
+            opacity: 0.5;
         }
-    
-        .button-down{
-            color: goldenrod;
-            text-align: center;
-            margin: 2rem;
-            cursor: pointer;
-    
-            button{
-                color: goldenrod;
-                background-color: transparent;
-                width: 100%;
-                border: none;
+    }
+
+    .image-profile{
+        position: absolute;
+        bottom: 0rem;
+
+        .bg-image{
+            background: $GradientBlue;
+            border-radius: 9rem 9rem 0 0;
+
+            img{
+                height: 14rem;
+                margin: 4rem 2rem 6.5rem 2rem;
             }
         }
 
-        .bar{
-            width: 6rem;
-            height: 0.2rem;
-            background-color: goldenrod;
-            margin: 1.5rem 0rem;
-        }
-    
-        img{
-            height: 30rem;
-        }
+    }
+
+    .name{
+        position: absolute;
+        top: 1rem;
+        color: $Blue;
+    }
+
+    .social{
+        position: relative;
+    }
 
 }
 
@@ -75,19 +129,21 @@ export default {
         transform: translateY(0px);
     }
 
+    @media all and (min-width: 992px) {
 
-    @media all and (max-width: 500px) {
+        .title-section{
 
-    .title-section{
-        height: 100%;
+            .box-text{
+                padding-top: 10rem;
+            }
 
-        h1{
-            font-size: 4.5rem;
+            .social{
+                position: absolute;
+                bottom: 2rem;
+            }
         }
+
     }
-
-
-}
 
 
 
